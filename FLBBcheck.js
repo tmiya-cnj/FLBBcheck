@@ -4,15 +4,16 @@
 if(document.getElementById("CustomerContactExt_field107").value==""){
     alert("住所が空欄です。")
 };
+
 if(document.getElementById("CustomerContactExt_field108").value==""){
     alert("住所カナが空欄です。")
 };
 
 //申込電番チェック
-if(document.getElementById("CustomerContactExtField25")!="" && 
-document.getElementById("CustomerContactExtField25")!=null){
+if(document.getElementById("CustomerContactExtField25")!=""){
     var sonota_obj = document.getElementById("CustomerContactExtField25").value;
-    if(sonota_obj.indexOf(document.getElementById("CustomerContactExt_field111"))==-1){
+    var mousiTelNo_obj = document.getElementById("CustomerContactExt_field111").value;
+    if(sonota_obj.indexOf(mousiTelNo_obj)==-1){
         alert("確認：その他情報にない電番が申込電番に入力されています。")
     }
 };
@@ -23,21 +24,21 @@ if(document.getElementById("CustomerContactExt_field109")==""){
 };
 
 //間柄チェック
-var BBC_Aidagara_obj = "本人,代表者,配偶者";
-if(document.getElementById("CustomerContactExtField180")==""){
+var BBC_Aidagara_obj = "本人代表者配偶者";
+var Aidagara_obj = document.getElementById("CustomerContactExtField180").value;
+if(Aidagara_obj==""){
     alert("間柄を入力してください。")
-}else if(BBC_Aidagara_obj.indexOf(document.getElementById("CustomerContactExtField180"))==-1 &
-document.getElementById("CustomerContactExt_field271")==""){
+}else if(BBC_Aidagara_obj.indexOf(Aidagara_obj)==-1 && document.getElementById("CustomerContactExt_field271").value==""){
     alert("間柄詳細を確認してください。")
 };
 
 //マンションタイプの際のプラン
-if(document.getElementById("CustomerContactExtField154")==""){
+if(document.getElementById("CustomerContactExtField154").value==""){
     alert("新規品目が空欄です。")
 }else{
     var hinmoku_obj = document.getElementById("CustomerContactExtField154").value;
     if(hinmoku_obj.indexOf("マンション")>0 &
-    document.getElementById("CustomerContactExtField155")==""){
+    document.getElementById("CustomerContactExtField155").value==""){
         alert("マンションのプランを選択してください。")
     }
 };
