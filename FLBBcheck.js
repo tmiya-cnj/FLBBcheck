@@ -33,9 +33,12 @@ document.getElementById("CustomerContactExt_field271")==""){
 //マンションタイプの際のプラン
 if(document.getElementById("CustomerContactExtField154")==""){
     alert("新規品目が空欄です。")
-}else if(document.getElementById("CustomerContactExtField154").indexOf("マンション")>0 &
-document.getElementById("CustomerContactExtField155")==""){
-    alert("マンションのプランを選択してください。")
+}else{
+    var hinmoku_obj = document.getElementById("CustomerContactExtField154").value;
+    if(hinmoku_obj.indexOf("マンション")>0 &
+    document.getElementById("CustomerContactExtField155")==""){
+        alert("マンションのプランを選択してください。")
+    }
 };
 
 if(document.getElementById("CustomerContactExt_field178").value==""){
