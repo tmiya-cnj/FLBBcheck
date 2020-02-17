@@ -9,7 +9,9 @@ if(document.getElementById("CustomerContactExt_field108").value==""){
 };
 
 //申込電番チェック
-if(document.getElementById("CustomerContactExtField25").indexOf(document.getElementById("CustomerContactExt_field111"))==-1){
+if(document.getElementById("CustomerContactExtField25")!="" &
+document.getElementById("CustomerContactExtField25").value
+.indexOf(document.getElementById("CustomerContactExt_field111"))==-1){
     alert("確認：その他情報にない電番が申込電番に入力されています。")
 };
 
@@ -19,7 +21,7 @@ if(document.getElementById("CustomerContactExt_field109")==""){
 };
 
 //間柄チェック
-var BBC_Aidagara_obj = "本人,代表者,配偶者"
+var BBC_Aidagara_obj = "本人,代表者,配偶者";
 if(document.getElementById("CustomerContactExtField180")==""){
     alert("間柄を入力してください。")
 }else if(BBC_Aidagara_obj.indexOf(document.getElementById("CustomerContactExtField180"))==-1 &
