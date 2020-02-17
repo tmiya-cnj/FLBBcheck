@@ -9,7 +9,8 @@ if(document.getElementById("CustomerContactExt_field108").value==""){
 };
 
 //申込電番チェック
-if(document.getElementById("CustomerContactExtField25")!=""){
+if(document.getElementById("CustomerContactExtField25")!="" && 
+document.getElementById("CustomerContactExtField25")!=null){
     var sonota_obj = document.getElementById("CustomerContactExtField25").value;
     if(sonota_obj.indexOf(document.getElementById("CustomerContactExt_field111"))==-1){
         alert("確認：その他情報にない電番が申込電番に入力されています。")
