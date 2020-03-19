@@ -26,7 +26,39 @@ document.getElementById("CustomerContactExtField229").style.removeProperty("back
 document.getElementById("CustomerContactExtField230").style.removeProperty("background-color");
 document.getElementById("CustomerContactExtField232").style.removeProperty("background-color");
 document.getElementById("CustomerContactExtField233").style.removeProperty("background-color");
+document.getElementById("CustomerContactExt_field255").style.removeProperty("background-color");
+document.getElementById("CustomerContactExtField259").style.removeProperty("background-color");
+document.getElementById("CustomerContactExt_field260").style.removeProperty("background-color");
 document.getElementById("CustomerContactExt_field271").style.removeProperty("background-color");
+
+//商品券チェック
+if(document.getElementById("CustomerContactExt_field3").value=="東"){
+    if(document.getElementById("CustomerContactExtField259").value==""){
+        document.getElementById("CustomerContactExtField259").style.backgroundColor="pink";
+        alert("東キャンペーン選択が空欄です。")
+    }else if(document.getElementById("CustomerContactExtField259").value=="電子マネー"){
+        if(document.getElementById("CustomerContactExt_field255").value==""){
+        document.getElementById("CustomerContactExt_field255").style.backgroundColor="pink";
+            alert("電子マネー金額が空欄です。")
+        }else if(isNaN(document.getElementById("CustomerContactExt_field255").value)){
+            document.getElementById("CustomerContactExt_field255").style.backgroundColor="pink";
+            alert("電子マネー金額は数値で入力してください。")
+        }
+        if(document.getElementById("CustomerContactExt_field260").value==""){
+            document.getElementById("CustomerContactExt_field260").style.backgroundColor="pink";
+            alert("電子マネー送付先アドレスが空欄です。")
+        }        
+    }else if(document.getElementById("CustomerContactExtField259").value=="商品券"){
+        if(document.getElementById("CustomerContactExt_field255").value==""){
+            document.getElementById("CustomerContactExt_field255").style.backgroundColor="pink";
+            alert("商品券金額が空欄です。")
+        }else if(isNaN(document.getElementById("CustomerContactExt_field255").value)){
+            document.getElementById("CustomerContactExt_field255").style.backgroundColor="pink";
+            alert("商品券金額は数値で入力してください。")
+        }
+
+    }
+}
 
 //住所の入力漏れチェック
 if(document.getElementById("CustomerContactExt_field107").value==""){
